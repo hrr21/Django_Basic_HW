@@ -6,7 +6,7 @@ def index(request):
     return render(request, 'mainapp/index.html')
 
 
-def products(request):
+def products(request, pk=None):
     context = {
         'products': Product.objects.all(),
 
