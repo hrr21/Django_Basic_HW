@@ -39,7 +39,9 @@
                 </li>
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'authapp:profile' %}">{{ user.username }} <i class="fas fa-user-circle"></i></a>
+                        <a class="nav-link" href="{% url 'authapp:profile' %}">
+                            {{ user.first_name }}
+                            <i class="fas fa-user-circle"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'authapp:logout' %}">Выйти <i class="fas fa-sign-out-alt"></i></a>
@@ -63,6 +65,8 @@
 <!-- FontAwesome script -->
 <script src="{% static 'vendor/fontawesome/fontawesome-icons.js'%}" crossorigin="anonymous"></script>
 
+<!-- Basket script -->
+<script src="{% static 'js/basket.js'%}"></script>
 
 </body>
 </html>
